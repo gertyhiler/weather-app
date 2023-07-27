@@ -11,7 +11,7 @@ button {
   background: var(--white);
   border-radius: var(--radius);
   border: 2px solid var(--hint);
-  padding: 15px 20px;
+  padding: 12px 25px;
 
   color: var(--gray);
   text-align: center;
@@ -23,6 +23,6 @@ button {
 }
 
 .btn_search-city {
-  margin-top: 45px;
-  margin-left: 45px;
+  margin-top: 41px;
+  margin-left: 42px;
 }

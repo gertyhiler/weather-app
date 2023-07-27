@@ -48,10 +48,14 @@
 .info {
   height: calc(100% - 120px);
   min-height: 630px;
+  padding: 25px 0;
+
   display: flex;
-  background: center/contain no-repeat url(../../img/side-bar-bg.jpg);
   flex-direction: column;
   justify-content: space-around;
+
+  background: top no-repeat url(../../img/side-bar-bg.jpg);
+  background-position-y: 20px;
 }
 
 .info__status {
@@ -85,7 +89,7 @@
   grid-column-end: 3;
 
   padding: 9px 0;
-  padding-left: 40px;
+  padding-left: 52px;
 }
 
 .info__geo::after {
@@ -96,4 +100,16 @@
   height: 40px;
   left: 0;
   bottom: 0;
+}
+
+.info__status_footer .info__weather-text_small:nth-child(1) {
+  margin-right: -55px;
+}
+
+.info__status_footer .info__weather-text_small:nth-child(2) {
+  margin-right: 55px;
+}
+
+.info__status_footer .info__weather-text_small:nth-child(3) {
+  margin-right: 37px;
 }
