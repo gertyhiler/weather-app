@@ -5,6 +5,7 @@
   flex-basis: 32%;
   min-width: 329px;
   max-width: 460px;
+  max-height: 100vh;
   position: relative;
 }
 
@@ -45,7 +46,12 @@
 /* info */
 
 .info {
-  background: center/contain no-repeat url('../../img/side-bar-bg.jpg');
+  height: calc(100% - 120px);
+  min-height: 630px;
+  display: flex;
+  background: center/contain no-repeat url(../../img/side-bar-bg.jpg);
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .info__status {
