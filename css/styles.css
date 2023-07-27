@@ -12,8 +12,11 @@
   box-sizing: border-box;
 }
 
-.main {
+body {
   background: var(--background-light);
+}
+
+.main {
   height: 100vh;
   display: flex;
 }

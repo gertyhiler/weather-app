@@ -9,6 +9,13 @@
   position: relative;
 }
 
+@media screen and (max-height: 725px) {
+  .side-bar {
+    max-height: initial;
+    height: fit-content;
+  }
+}
+
 /* search */
 
 .search {
