@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <main id="app" class="main">
+      <section id="side-bar" class="side-bar">
+        <div class="search">
+          <div class="search-wrapper">
+            <form action="" class="search__form">
+              <input
+                class="input"
+                type="search"
+                placeholder="Москва"
+                name=""
+                id=""
+              />
+              <button type="submit" class="btn">Найти</button>
+              <button class="close" aria-label="close">
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26 2.61857L23.3814 0L13 10.3814L2.61857 0L0 2.61857L10.3814 13L0 23.3814L2.61857 26L13 15.6186L23.3814 26L26 23.3814L15.6186 13L26 2.61857Z"
+                    fill="#48484A"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <button class="btn btn_search-city">Поиск города</button>
+        <div class="info">
+          <div class="info__status">
+            <div class="info__container">
+              <img class="img" src="./img/snow-status.png" alt="snow status" />
+            </div>
+          </div>
+          <div class="info__status info__status_about">
+            <span class="temp info__temp">1 °C</span>
+            <span class="info__weather-text">Cнег</span>
+            <span class="info__weather-text_small">Ощущается как -3 °C</span>
+          </div>
+          <div class="info__status info__status_footer">
+            <span class="info__weather-text_small">Сегодня</span>
+            <span class="info__weather-text_small">Вс, 13 мар</span>
+            <span class="info__weather-text_small info__geo">Москва</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="content"></section>
+    </main>
+  </body>
+</html>

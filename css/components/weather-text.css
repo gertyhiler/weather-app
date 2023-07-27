@@ -1,0 +1,32 @@
+.temp {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.temp:first-letter {
+  font-size: 64px;
+}
+
+.info__temp {
+  font-size: 50px;
+}
+
+.info__temp:first-letter {
+  font-size: 96px;
+}
+
+.info__weather-text {
+  color: var(--gray);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.info__weather-text_small {
+  color: var(--hint);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

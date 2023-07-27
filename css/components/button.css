@@ -1,0 +1,28 @@
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+.btn {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 2px solid var(--hint);
+  padding: 15px 20px;
+
+  color: var(--gray);
+  text-align: center;
+  font-family: var(--font-face);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.btn_search-city {
+  margin-top: 45px;
+  margin-left: 45px;
+}
