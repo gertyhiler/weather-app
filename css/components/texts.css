@@ -1,3 +1,5 @@
+/* side bar text */
+
 .temp {
   font-size: 36px;
   font-weight: 900;
@@ -30,3 +32,14 @@
   font-weight: 400;
   line-height: normal;
 }
+
+/* content section text */
+
+.content__headline {
+  color: var(--gray);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+

@@ -1,0 +1,17 @@
+/* main container */
+
+.content {
+  padding: 42px 0 45px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 720px;
+  height: fit-content;
+}
+
+/* header */
+
+.content__header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 25px;
+}
