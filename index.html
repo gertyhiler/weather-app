@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -55,13 +55,19 @@
           </div>
           <div class="info__status info__status_about">
             <span class="temp info__temp">1 °C</span>
-            <span class="info__weather-text">Cнег</span>
-            <span class="info__weather-text_small">Ощущается как -3 °C</span>
+            <span class="weather-text info__weather-text">Cнег</span>
+            <span class="weather-text info__weather-text_small"
+              >Ощущается как -3 °C</span
+            >
           </div>
           <div class="info__status info__status_footer">
-            <span class="info__weather-text_small">Сегодня</span>
-            <span class="info__weather-text_small">Вс, 13 мар</span>
-            <span class="info__weather-text_small info__geo">Москва</span>
+            <span class="weather-text info__weather-text_small">Сегодня</span>
+            <span class="weather-text info__weather-text_small"
+              >Вс, 13 мар</span
+            >
+            <span class="weather-text info__weather-text_small info__geo"
+              >Москва</span
+            >
           </div>
         </div>
       </section>
@@ -70,8 +76,15 @@
         <header class="content__header">
           <h1 class="content__headline">Прогноз</h1>
           <span class="switcher">
-            <button class="switcher__btn switcher__btn_active" data-switcher-btn="week">на неделю</button>
-            <button class="switcher__btn" data-switcher-btn="hours">почасовой</button>
+            <button
+              class="switcher__btn switcher__btn_active"
+              data-switcher-btn="week"
+            >
+              на неделю
+            </button>
+            <button class="switcher__btn" data-switcher-btn="hours">
+              почасовой
+            </button>
           </span>
         </header>
         <div data-switcher-tab="week" class="slider">
@@ -79,12 +92,12 @@
             <ul class="slider__list">
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">Завтра</span>
-                  <img src="./img/foggy.png" alt="Туман">
+                  <span class="slider-card__text slider-card__text_day"
+                    >Завтра</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                     <span class="slider-card__text slider-card__text_hint">
                       4°C
                     </span>
@@ -93,12 +106,12 @@
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">Пн, 15 мар</span>
-                  <img src="./img/temporary-rain.png" alt="Временами дождь">
+                  <span class="slider-card__text slider-card__text_day"
+                    >Пн, 15 мар</span
+                  >
+                  <img src="./img/temporary-rain.png" alt="Временами дождь" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                     <span class="slider-card__text slider-card__text_hint">
                       4°C
                     </span>
@@ -107,12 +120,12 @@
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">Вт, 16 мар</span>
-                  <img src="./img/temporary-rain.png" alt="Временами дождь">
+                  <span class="slider-card__text slider-card__text_day"
+                    >Вт, 16 мар</span
+                  >
+                  <img src="./img/temporary-rain.png" alt="Временами дождь" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                     <span class="slider-card__text slider-card__text_hint">
                       4°C
                     </span>
@@ -121,12 +134,12 @@
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">Ср, 17 мар</span>
-                  <img src="./img/storm.png" alt="Гроза">
+                  <span class="slider-card__text slider-card__text_day"
+                    >Ср, 17 мар</span
+                  >
+                  <img src="./img/storm.png" alt="Гроза" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                     <span class="slider-card__text slider-card__text_hint">
                       4°C
                     </span>
@@ -135,12 +148,12 @@
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">Чт, 18 мар</span>
-                   <img src="./img/storm.png" alt="Гроза">
+                  <span class="slider-card__text slider-card__text_day"
+                    >Чт, 18 мар</span
+                  >
+                  <img src="./img/storm.png" alt="Гроза" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                     <span class="slider-card__text slider-card__text_hint">
                       4°C
                     </span>
@@ -149,12 +162,12 @@
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">Пт, 19 мар</span>
-                   <img src="./img/storm.png" alt="Гроза">
+                  <span class="slider-card__text slider-card__text_day"
+                    >Пт, 19 мар</span
+                  >
+                  <img src="./img/storm.png" alt="Гроза" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                     <span class="slider-card__text slider-card__text_hint">
                       4°C
                     </span>
@@ -166,86 +179,106 @@
 
           <div class="slider__controls">
             <button class="slider__btn slider__btn_prev slider__btn_empty">
-              <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                <circle cx="19" cy="19" r="19" fill="white"/>
-                <path d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5" stroke="#ACACAC" stroke-width="3"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+              >
+                <circle cx="19" cy="19" r="19" fill="white" />
+                <path
+                  d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5"
+                  stroke="#ACACAC"
+                  stroke-width="3"
+                />
               </svg>
             </button>
             <button class="slider__btn slider__btn_next">
-              <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                <circle cx="19" cy="19" r="19" fill="white"/>
-                <path d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5" stroke="#ACACAC" stroke-width="3"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+              >
+                <circle cx="19" cy="19" r="19" fill="white" />
+                <path
+                  d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5"
+                  stroke="#ACACAC"
+                  stroke-width="3"
+                />
               </svg>
             </button>
           </div>
         </div>
 
-        <div data-switcher-tab="hours" class="slider" style="display: none;">
+        <div data-switcher-tab="hours" class="slider" style="display: none">
           <div class="slider__wrapper">
             <ul class="slider__list">
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">15:00</span>
-                  <img src="./img/foggy.png" alt="Туман">
+                  <span class="slider-card__text slider-card__text_day"
+                    >15:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                   </div>
                 </div>
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">16:00</span>
-                 <img src="./img/foggy.png" alt="Туман">
+                  <span class="slider-card__text slider-card__text_day"
+                    >16:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                   </div>
                 </div>
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">17:00</span>
-                 <img src="./img/foggy.png" alt="Туман">
+                  <span class="slider-card__text slider-card__text_day"
+                    >17:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                   </div>
                 </div>
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">18:00</span>
-                  <img src="./img/foggy.png" alt="Туман">
+                  <span class="slider-card__text slider-card__text_day"
+                    >18:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                   </div>
                 </div>
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">19:00</span>
-                   <img src="./img/storm.png" alt="Гроза">
+                  <span class="slider-card__text slider-card__text_day"
+                    >19:00</span
+                  >
+                  <img src="./img/storm.png" alt="Гроза" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                   </div>
                 </div>
               </li>
               <li class="slider__item">
                 <div class="slider-card">
-                  <span class="slider-card__text slider-card__text_day">20:00</span>
-                   <img src="./img/storm.png" alt="Гроза">
+                  <span class="slider-card__text slider-card__text_day"
+                    >20:00</span
+                  >
+                  <img src="./img/storm.png" alt="Гроза" />
                   <div class="slider-card__wrapper">
-                    <span class="slider-card__text">
-                      10°C
-                    </span>
+                    <span class="slider-card__text"> 10°C </span>
                   </div>
                 </div>
               </li>
@@ -254,17 +287,113 @@
 
           <div class="slider__controls">
             <button class="slider__btn slider__btn_prev slider__btn_empty">
-              <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                <circle cx="19" cy="19" r="19" fill="white"/>
-                <path d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5" stroke="#ACACAC" stroke-width="3"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+              >
+                <circle cx="19" cy="19" r="19" fill="white" />
+                <path
+                  d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5"
+                  stroke="#ACACAC"
+                  stroke-width="3"
+                />
               </svg>
             </button>
             <button class="slider__btn slider__btn_next">
-              <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                <circle cx="19" cy="19" r="19" fill="white"/>
-                <path d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5" stroke="#ACACAC" stroke-width="3"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+              >
+                <circle cx="19" cy="19" r="19" fill="white" />
+                <path
+                  d="M15 13.5L24.1265 19.1497C24.758 19.5407 24.758 20.4593 24.1265 20.8503L15 26.5"
+                  stroke="#ACACAC"
+                  stroke-width="3"
+                />
               </svg>
             </button>
+          </div>
+        </div>
+
+        <div class="today">
+          <span class="today__headline-wrapper"
+            ><h2 class="content__headline">Подробно на сегодня</h2></span
+          >
+
+          <div class="more">
+            <ul class="more__list">
+              <li class="more__item">
+                <div class="more-card">
+                  <span class="weather-text more__weather-text">
+                    Скорость ветра
+                  </span>
+                  <div class="more-card__info">
+                    <span class="temp temp_first-letter">
+                      7
+                    </span>
+                    <span class="temp">
+                      м/с
+                    </span>
+                  </div>
+                  <div class="more-card__footer">
+                    <span class="weather-text more-card__footer_text">
+                      СЗ
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="more__item">
+                <div class="more-card">
+                  <span class="weather-text more__weather-text">
+                    Влажность
+                  </span>
+                  <div class="more-card__info">
+                    <span class="temp temp_first-letter">
+                      84
+                    </span>
+                    <span class="temp">
+                      %
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="more__item">
+                <div class="more-card">
+                  <span class="weather-text more__weather-text">
+                    Видимость
+                  </span>
+                  <div class="more-card__info">
+                    <span class="temp temp_first-letter">
+                      6.2
+                    </span>
+                    <span class="temp">
+                      км
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="more__item">
+                <div class="more-card">
+                  <span class="weather-text more__weather-text">
+                    Давление
+                  </span>
+                  <div class="more-card__info">
+                    <span class="temp temp_first-letter">
+                      742
+                    </span>
+                    <span class="temp more-card_pressure">
+                      мм рт. ст.
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -55,7 +55,7 @@
 .info {
   height: calc(100% - 120px);
   min-height: 630px;
-  padding: 25px 0;
+  padding: 14px 0 30px;
 
   display: flex;
   flex-direction: column;
@@ -78,7 +78,8 @@
 
 .info__status_about {
   flex-direction: column;
-  gap: 17px
+  gap: 16px;
+  margin-top: -17px;
 }
 
 .info__status_footer {

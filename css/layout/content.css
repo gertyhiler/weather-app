@@ -15,3 +15,16 @@
   gap: 24px;
   margin-bottom: 25px;
 }
+
+/* more */
+
+.today {
+  margin-top: 39px;
+}
+
+.more__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  row-gap: 18px;
+}
