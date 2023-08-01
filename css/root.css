@@ -1,8 +1,8 @@
 :root {
-  --background-light: #F1F1F1;
-  --hint: #ACACAC;
-  --white: #FFF;
-  --gray: #48484A;
-  --radius: 10px;
-  --font-face: 'Rubik', sans-serif;
+	--background-light: #f1f1f1;
+	--hint: #acacac;
+	--white: #fff;
+	--gray: #48484a;
+	--radius: 10px;
+	--font-face: 'Rubik', sans-serif;
 }

@@ -1,35 +1,118 @@
 .slider {
-  position: relative;
+	position: relative;
+}
+
+.slider__wrapper {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
 }
 
 .slider__list {
-  display: flex;
-  gap: 16px;
-  justify-content: space-between;
+	display: flex;
+	width: 720px;
+	gap: 24px;
+	overflow: hidden;
+	/* justify-content: space-between;
+  flex-wrap: wrap; */
+}
+
+@media (width <= 1300px) {
+	.slider__list {
+		width: 596px;
+	}
+}
+@media (width <= 1100px) {
+	.slider__list {
+		width: 472px;
+	}
+}
+
+@media (width <= 970px) {
+	.slider__list {
+		width: 348px;
+	}
+}
+
+@media (width <= 827px) {
+	.slider__list {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		justify-items: center;
+	}
+}
+
+@media (width <= 780px) {
+	.slider__list {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media (width <= 660px) {
+	.slider__list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+@media (width <= 534px) {
+	.slider__list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (width <= 410px) {
+	.slider__list {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+		padding: 0 17px;
+	}
+}
+
+.slider__item {
+	width: 100px;
 }
 
 .slider__btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .slider__btn_prev {
-  transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 .slider__btn_empty {
-  opacity: .3;
-  cursor: not-allowed;
+	opacity: 0.3;
+	cursor: not-allowed;
 }
 
 .slider__controls {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-  position: absolute;
-  bottom: 50%;
-  top: 50%;
-  left: -10%;
-  right: -10%;
+	position: absolute;
+	bottom: 50%;
+	top: 50%;
+	left: -9.1%;
+	right: -9.3%;
+}
+
+@media (width <= 1100px) {
+	.slider__controls {
+		left: -12.1%;
+		right: -12.3%;
+	}
+}
+
+@media (width <= 970px) {
+	.slider__controls {
+		left: -13.3%;
+		right: -10.8%;
+	}
+}
+
+@media (width <= 827px) {
+	.slider__controls {
+		display: none;
+	}
 }

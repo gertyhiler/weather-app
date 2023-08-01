@@ -14,15 +14,28 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  background: var(--background-light);
+	background: var(--background-light);
 }
 
 .main {
-  height: 100vh;
-  display: flex;
-  gap: 18px;
+	height: 100vh;
+	display: flex;
+	gap: 9.6%;
+}
+
+@media (width <= 970px) {
+	.main {
+		gap: 9.1%;
+	}
+}
+
+@media (width <= 827px) {
+	.main {
+		flex-direction: column;
+		gap: 0;
+	}
 }

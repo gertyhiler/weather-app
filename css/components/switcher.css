@@ -1,28 +1,37 @@
 .switcher {
-  display: flex;
-  gap: 16px;
+	display: flex;
+	gap: 16px;
+}
+
+@media (width <= 827px) {
+	.switcher {
+		gap: 50px;
+		justify-content: space-around;
+		width: 100%;
+		padding: 0 17px;
+	}
 }
 
 .switcher__btn {
-  position: relative;
-  color: var(--hint);
-  font-family: Rubik;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+	position: relative;
+	color: var(--hint);
+	font-family: Rubik;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
 }
 
 .switcher__btn_active {
-  color: var(--gray);
+	color: var(--gray);
 }
 
 .switcher__btn_active::before {
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gray);
+	content: '';
+	position: absolute;
+	bottom: -7px;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--gray);
 }
