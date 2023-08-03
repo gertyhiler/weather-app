@@ -1,9 +1,9 @@
 :root {
-	--background-light: #f1f1f1;
+	--background-light: #100E1C;
 	--hint: #acacac;
-	--white: #fff;
+	--white: #212331;
   --dark: #212331;
-	--gray: #48484a;
+	--gray: #E6E6E6;
 	--radius: 10px;
 	--font-face: 'Rubik', sans-serif;
 }

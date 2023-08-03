@@ -3,6 +3,7 @@
 .temp {
 	font-size: 36px;
 	font-weight: 500;
+  color: var(--gray);
 }
 
 .temp_first-letter {

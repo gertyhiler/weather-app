@@ -13,7 +13,8 @@
 		searchOpenBtn.addEventListener('click', clickHandler);
 		searchCloseBtn.addEventListener('click', clickHandler);
 	}
-	function switcherInit() {
+
+	function switcherTabsInit() {
 		const DEFAULT_TAB = 'week';
 		const TAB_ATTR = 'data-switcher-tab';
 		const BTN_ATTR = 'data-switcher-btn';
@@ -48,8 +49,23 @@
 			});
 		});
 	}
+
+  function themeSwitcherInit() {
+    document.querySelector('.theme-switcher__checkbox').addEventListener("change", (e) => {
+      if (e.target.checked) {
+        document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="./css/root-dark.css">')
+        document.body.classList.add('dark')
+      } else {
+        document.querySelector('link[rel="stylesheet"][href*="dark"]').remove()
+        document.body.classList.remove('dark')
+      }
+    });
+    
+  }
+
 	document.addEventListener('DOMContentLoaded', () => {
 		searchInit();
-		switcherInit();
+		switcherTabsInit();
+    themeSwitcherInit();
 	});
 })();

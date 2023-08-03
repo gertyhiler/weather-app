@@ -13,8 +13,6 @@
 	width: 720px;
 	gap: 24px;
 	overflow: hidden;
-	/* justify-content: space-between;
-  flex-wrap: wrap; */
 }
 
 @media (width <= 1300px) {
@@ -75,6 +73,10 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.dark .slider__btn circle {
+  fill: var(--white);
 }
 
 .slider__btn_prev {

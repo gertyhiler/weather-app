@@ -34,6 +34,10 @@
 	color: #d3d3d3;
 }
 
+.dark .slider-card__text_hint {
+  color: #6D6D6D;
+}
+
 .slider-card__wrapper {
 	display: flex;
 	position: absolute;

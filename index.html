@@ -14,10 +14,18 @@
     <link rel="stylesheet" href="./css/styles.css" >
 
     <script src="./js/main.js" defer></script>
+    <link rel="preload" href="./css/root-dark.css" as="style">
+    <!-- <link rel="stylesheet" href="./css/root-dark.css"> -->
   </head>
-  <body>
+  <body class="">
     <main id="app" class="main">
       <aside id="side-bar" class="side-bar">
+        <div class="theme-switcher">
+          <label class="theme-switcher__wrapper">
+            <input type="checkbox" class="theme-switcher__checkbox" />
+            <span class="theme-switcher__slider"></span>
+          </label>
+        </div>
         <div class="search">
           <div class="search-wrapper">
             <form action="#search-action" class="search__form">
@@ -293,6 +301,72 @@
                     >20:00</span
                   >
                   <img src="./img/storm.png" alt="Гроза" >
+                  <div class="slider-card__wrapper">
+                    <span class="slider-card__text"> 10°C </span>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider-card">
+                  <span class="slider-card__text slider-card__text_day"
+                    >21:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" >
+                  <div class="slider-card__wrapper">
+                    <span class="slider-card__text"> 10°C </span>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider-card">
+                  <span class="slider-card__text slider-card__text_day"
+                    >22:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" >
+                  <div class="slider-card__wrapper">
+                    <span class="slider-card__text"> 10°C </span>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider-card">
+                  <span class="slider-card__text slider-card__text_day"
+                    >23:00</span
+                  >
+                  <img src="./img/storm.png" alt="Гроза" >
+                  <div class="slider-card__wrapper">
+                    <span class="slider-card__text"> 10°C </span>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider-card">
+                  <span class="slider-card__text slider-card__text_day"
+                    >00:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" >
+                  <div class="slider-card__wrapper">
+                    <span class="slider-card__text"> 10°C </span>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider-card">
+                  <span class="slider-card__text slider-card__text_day"
+                    >01:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" >
+                  <div class="slider-card__wrapper">
+                    <span class="slider-card__text"> 10°C </span>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider-card">
+                  <span class="slider-card__text slider-card__text_day"
+                    >02:00</span
+                  >
+                  <img src="./img/foggy.png" alt="Туман" >
                   <div class="slider-card__wrapper">
                     <span class="slider-card__text"> 10°C </span>
                   </div>

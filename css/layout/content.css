@@ -3,7 +3,7 @@
 .content {
 	padding: 42px 0 45px 0;
 	margin-right: 70px;
-	margin-left: 41.3%;
+	margin-left: 41.6%;
 	flex-basis: 62%;
 	max-width: 720px;
 	height: fit-content;
@@ -30,6 +30,12 @@
 		padding-top: 62px;
 	}
 }
+
+/* @media screen and (height <= 710px) {
+	.content {
+    margin-left: 10px;
+  }
+} */
 
 @media (width <= 827px) {
 	.content {

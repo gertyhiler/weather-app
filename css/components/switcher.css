@@ -22,6 +22,10 @@
 	line-height: 100%;
 }
 
+.dark .switcher__btn:not(.switcher__btn_active) {
+  color: #6D6D6D;
+}
+
 .switcher__btn_active {
 	color: var(--gray);
 }
