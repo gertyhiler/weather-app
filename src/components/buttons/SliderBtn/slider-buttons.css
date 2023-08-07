@@ -1,0 +1,18 @@
+.slider__btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dark .slider__btn circle {
+  fill: var(--white);
+}
+
+.slider__btn_prev {
+	transform: rotate(-180deg);
+}
+
+.slider__btn_empty {
+	opacity: 0.3;
+	cursor: not-allowed;
+}

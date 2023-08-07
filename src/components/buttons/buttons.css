@@ -1,0 +1,52 @@
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+
+	cursor: pointer;
+}
+
+.btn {
+	background: var(--white);
+	border-radius: var(--radius);
+	border: 2px solid var(--hint);
+	padding: 12px 25px;
+
+	color: var(--gray);
+	text-align: center;
+	font-family: var(--font-face);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.btn_search {
+	padding: 12px 18px;
+}
+
+@media (width <= 827px) {
+	.btn_search {
+		margin-left: 24px;
+	}
+}
+
+.btn_search-city {
+	margin-top: 41px;
+	margin-left: 42px;
+}
+
+@media (width <= 970px) {
+	.btn_search-city {
+		margin-top: 54px;
+		margin-left: 28px;
+	}
+}
+
+@media (width <= 827px) {
+	.btn_search-city {
+		margin-top: 32px;
+		margin-left: 31px;
+	}
+}

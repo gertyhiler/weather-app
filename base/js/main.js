@@ -24,7 +24,7 @@
 		const buttons = document.querySelectorAll(`[${BTN_ATTR}]`);
 
 		const toggleBtn = () => {
-			for (btn of buttons) {
+			for (let btn of buttons) {
 				if (btn.getAttribute(BTN_ATTR) !== currentTab) {
 					btn.classList.remove('switcher__btn_active');
 					continue;

@@ -1,0 +1,274 @@
+/* main container */
+
+.side-bar {
+	background: var(--white);
+	flex-basis: 31.7%;
+	width: 31.7%;
+	min-width: 329px;
+	max-height: 100vh;
+	height: 100%;
+	position: fixed;
+}
+
+@media screen and (height <= 710px) and (width >= 827px) {
+	.side-bar {
+    overflow: scroll;
+	}
+}
+
+@media (width <= 827px) {
+	.side-bar {
+		width: 100%;
+		min-width: initial;
+		position: relative;
+		max-height: 667px;
+	}
+}
+
+/* search */
+
+.search {
+	padding: 42px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: var(--white);
+	z-index: 10;
+	left: -100%;
+
+	transition: transform 0.5s ease-in-out;
+}
+
+@media (width <= 970px) {
+	.search {
+		padding: 42px 25px;
+	}
+}
+
+@media (width <= 827px) {
+	.search {
+		padding: 28px 50px 28px 23px;
+	}
+}
+
+.search_active {
+	transform: translateX(100%);
+}
+
+.search__form {
+	display: flex;
+	gap: 21px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 75px;
+	margin-left: 4px;
+}
+
+@media (827px < width <= 970px) {
+	.search__form {
+		padding-top: 79px;
+		margin-left: 0px;
+	}
+}
+
+@media (width <= 827px) {
+	.search__form {
+		gap: 19px;
+	}
+}
+
+.search__form .close {
+	position: absolute;
+	right: 45px;
+	top: 45px;
+}
+
+@media (width <= 970px) {
+	.search__form .close {
+		right: 27px;
+		top: 60px;
+	}
+}
+
+@media (width <= 827px) {
+	.search__form .close {
+		right: 50px;
+		top: 40px;
+	}
+}
+
+/* switcher */
+
+.theme-switcher {
+  right: 40px;
+  top: 51px;
+}
+
+@media (width <= 970px) {
+  .theme-switcher {
+    right: 21px;
+    top: 62px;
+  }
+}
+
+@media (width <= 827px) {
+  .theme-switcher {
+    right: 31px;
+    top: 40px;
+  }
+}
+/* info */
+
+.info {
+	height: calc(100% - 120px);
+	min-height: 630px;
+	padding: 0px 0 35px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	background: top no-repeat var(--white) url('../../../public/assets/side-bar-bg.png');
+  background-blend-mode: difference;
+	background-position-y: 20px;
+}
+
+@media (width <= 970px) {
+	.info {
+		padding-bottom: 19px;
+		background-position-y: 25.5%;
+		background-size: 164%;
+	}
+}
+
+@media (width <= 827px) {
+	.info {
+		background-size: 141.2%;
+		background-position-y: -4%;
+		justify-content: initial;
+    height: 586px;
+    min-height: initial;
+	}
+}
+
+.info__status {
+	display: flex;
+	width: 100%;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (width <= 827px) {
+	.info__status {
+		margin: 0;
+		margin-bottom: -7px;
+	}
+}
+
+.info__container {
+	display: inline-block;
+}
+
+@media (width <= 970px) {
+	.info__container {
+		transform: translateY(1px);
+	}
+}
+@media (width <= 827px) {
+	.info__container {
+		transform: translateY(9px);
+	}
+}
+
+.info__status_about {
+	flex-direction: column;
+	gap: 19px;
+	margin-top: -14px;
+	transform: translateY(-17px);
+}
+
+@media (width <= 970px) {
+	.info__status_about {
+		transform: translateY(0);
+	}
+}
+
+.info__status_footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px 25px;
+	justify-items: center;
+	margin-top: 65px;
+}
+
+@media (width <= 970px) {
+	.info__status_footer {
+		gap: 28px 25px;
+		margin-top: 82px;
+	}
+}
+
+@media (width <= 827px) {
+	.info__status_footer {
+		margin-top: 89px;
+	}
+}
+
+.info__geo {
+	position: relative;
+
+	grid-column-start: 1;
+	grid-column-end: 3;
+
+	padding: 9px 0;
+	padding-left: 52px;
+}
+
+.info__geo::after {
+	position: absolute;
+	content: '';
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cpath d='M19.9999 3.33334C13.5499 3.33334 8.33325 8.55001 8.33325 15C8.33325 23.75 19.9999 36.6667 19.9999 36.6667C19.9999 36.6667 31.6666 23.75 31.6666 15C31.6666 8.55001 26.4499 3.33334 19.9999 3.33334ZM19.9999 19.1667C18.8949 19.1667 17.835 18.7277 17.0536 17.9463C16.2722 17.1649 15.8333 16.1051 15.8333 15C15.8333 13.8949 16.2722 12.8351 17.0536 12.0537C17.835 11.2723 18.8949 10.8333 19.9999 10.8333C21.105 10.8333 22.1648 11.2723 22.9462 12.0537C23.7276 12.8351 24.1666 13.8949 24.1666 15C24.1666 16.1051 23.7276 17.1649 22.9462 17.9463C22.1648 18.7277 21.105 19.1667 19.9999 19.1667Z' fill='%23EC6E4D'/%3E%3C/svg%3E");
+	width: 40px;
+	height: 40px;
+	left: 0;
+	bottom: 0;
+}
+
+.info__status_footer .info__weather-text-small:nth-child(1) {
+	margin-right: -55px;
+}
+
+@media (width <= 970px) {
+	.info__status_footer .info__weather-text-small:nth-child(1) {
+		margin-right: 9px;
+	}
+}
+
+@media (width <= 827px) {
+	.info__status_footer .info__weather-text-small:nth-child(1) {
+		margin-right: -14px;
+	}
+}
+
+.info__status_footer .info__weather-text-small:nth-child(2) {
+	margin-right: 55px;
+}
+
+@media (width <= 970px) {
+	.info__status_footer .info__weather-text-small:nth-child(2) {
+		margin-right: -11px;
+	}
+}
+
+@media (width <= 827px) {
+	.info__status_footer .info__weather-text-small:nth-child(2) {
+		margin-right: 11px;
+	}
+}
+
+.info__status_footer .info__weather-text-small:nth-child(3) {
+	margin-right: 37px;
+}

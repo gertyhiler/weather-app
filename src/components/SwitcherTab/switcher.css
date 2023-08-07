@@ -1,0 +1,13 @@
+.switcher {
+	display: flex;
+	gap: 16px;
+}
+
+@media (width <= 827px) {
+	.switcher {
+		gap: 50px;
+		justify-content: space-around;
+		width: 100%;
+		padding: 0 17px;
+	}
+}

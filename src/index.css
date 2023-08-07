@@ -1,0 +1,51 @@
+@import url('./normalize.css');
+@import url('./texts.css');
+:root {
+	--background-light: #f1f1f1;
+	--hint: #acacac;
+	--white: #fff;
+  --dark: #212331;
+	--gray: #48484a;
+	--radius: 10px;
+	--font-face: 'Rubik', sans-serif;
+}
+
+.dark {
+  --background-light: #100E1C;
+	--hint: #acacac;
+	--white: #212331;
+  --dark: #212331;
+	--gray: #E6E6E6;
+	--radius: 10px;
+	--font-face: 'Rubik', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--background-light);
+}
+
+.main {
+	height: 100vh;
+	display: flex;
+	gap: 9.6%;
+}
+
+@media (width <= 970px) {
+	.main {
+		gap: 9.1%;
+	}
+}
+
+@media (width <= 827px) {
+	.main {
+		flex-direction: column;
+		gap: 0;
+    height: fit-content;
+	}
+}

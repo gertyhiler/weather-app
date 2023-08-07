@@ -1,0 +1,27 @@
+.switcher__btn {
+	position: relative;
+	color: var(--hint);
+	font-family: Rubik;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+}
+
+.dark .switcher__btn:not(.switcher__btn_active) {
+  color: #6D6D6D;
+}
+
+.switcher__btn_active {
+	color: var(--gray);
+}
+
+.switcher__btn_active::before {
+	content: '';
+	position: absolute;
+	bottom: -7px;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--gray);
+}

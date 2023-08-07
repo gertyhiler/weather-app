@@ -1,0 +1,66 @@
+/* side bar text */
+
+.temp {
+	font-size: 36px;
+	font-weight: 500;
+  color: var(--gray);
+}
+
+.temp_first-letter {
+	font-size: 64px;
+	font-weight: 900;
+}
+
+.info__temp {
+	font-size: 50px;
+}
+
+.info__temp:first-letter {
+	font-size: 96px;
+	font-weight: 900;
+}
+
+.weather-text {
+	color: var(--gray);
+	font-size: 18px;
+	font-style: normal;
+	line-height: 100%;
+	font-weight: 400;
+}
+
+.info__weather-text {
+	font-weight: 700;
+	font-size: 36px;
+}
+
+.info__weather-text-small {
+	color: var(--hint);
+}
+
+/* content section text */
+
+.content__headline {
+	color: var(--gray);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+}
+
+@media (width <= 827px) {
+	.content__headline {
+		text-align: center;
+	}
+}
+
+.more__weather-text {
+	text-align: center;
+}
+
+.more-card__footer-text {
+	font-weight: 300;
+}
+
+.more-card__pressure {
+	font-size: 18px;
+}
