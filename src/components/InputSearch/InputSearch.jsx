@@ -9,6 +9,7 @@ export function InputSearch() {
 			type="search"
 			placeholder="Москва"
 			name="search"
+      autoComplete='off'
 			id="search"
 			value={value}
 			onChange={(e) => {
