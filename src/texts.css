@@ -64,3 +64,12 @@
 .more-card__pressure {
 	font-size: 18px;
 }
+
+.history__text {
+  color: var(--gray);
+  font-family: var(--font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}

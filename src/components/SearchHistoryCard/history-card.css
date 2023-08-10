@@ -1,0 +1,47 @@
+.history__card {
+  width: 100%;
+}
+
+.history__card:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.history__btn {
+  position: relative;
+  border-radius: var(--radius);
+  width: 100%;
+  background: var(--white);
+  padding: 26px 30px;
+  padding-right: 41px;
+  text-align: left;
+  word-break: break-all;
+  transition: background-color .3s ease-in;
+}
+
+@media (width <= 829px) {
+  .history__btn {
+    padding: 24px 60px 24px 24px;
+  }
+}
+
+.history__btn:hover {
+  background: var(--light-gray);
+}
+
+.history__btn::after {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  width: 11px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='15' viewBox='0 0 11 15' fill='none'%3E%3Cpath d='M2.09312 -3.05176e-05L0 1.76247L6.79892 7.49997L0 13.2375L2.09312 15L11 7.49997L2.09312 -3.05176e-05Z' fill='%23ACACAC'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 30px;
+  top: 41.2%;
+  transition: opacity .3s ease-in;
+}
+
+.history__btn:hover::after {
+  opacity: 1; 
+}

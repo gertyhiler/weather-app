@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useInputSearchState } from '../../state/useInputSearchState/useInputSearchState'
 import './input.css';
 
 export function InputSearch() {
-	const [value, setValue] = useState('');
+	const { value, setValue } = useInputSearchState((state) => state);
 	return (
 		<input
 			className="input"

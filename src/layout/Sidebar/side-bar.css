@@ -5,7 +5,7 @@
 	flex-basis: 31.7%;
 	width: 31.7%;
 	min-width: 329px;
-	max-height: 100vh;
+	max-height: fit-content;
 	height: 100%;
 	position: fixed;
 }
@@ -30,13 +30,19 @@
 .search {
 	padding: 42px;
 	position: absolute;
-	height: 100%;
+	height: max-content;
 	width: 100%;
 	background: var(--white);
 	z-index: 10;
 	left: -100%;
 
 	transition: transform 0.5s ease-in-out;
+}
+
+@media (height >= 700px) {
+  .search {
+    height: 100%;
+  }
 }
 
 @media (width <= 970px) {
@@ -49,6 +55,10 @@
 	.search {
 		padding: 28px 50px 28px 23px;
 	}
+}
+
+.search-wrapper:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .search_active {
@@ -135,7 +145,7 @@
 	background-position-y: 20px;
 }
 
-@media (width <= 970px) {
+@media (width <= 1270px) {
 	.info {
 		padding-bottom: 19px;
 		background-position-y: 25.5%;
@@ -145,11 +155,16 @@
 
 @media (width <= 827px) {
 	.info {
-		background-size: 141.2%;
+		background-size: 91.2%;
 		background-position-y: -4%;
 		justify-content: initial;
     height: 586px;
     min-height: initial;
+	}
+}
+@media (width <= 570px) {
+	.info {
+		background-size: 141.2%;
 	}
 }
 

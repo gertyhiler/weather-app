@@ -26,6 +26,10 @@ input {
 	line-height: normal;
 }
 
+.input:focus {
+  outline: none;
+}
+
 @media (width <= 970px) {
 	.input {
 		max-width: initial;
