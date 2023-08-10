@@ -1,13 +1,21 @@
 import { HeadlineTodayInfoCard } from '../HeadlineTodayInfoCard';
 import { MoreCardInfo } from '../MoreCardInfo';
 import { MoreCardFooter } from '../MoreCardFooter';
+import { useWeatherState } from '../../../state/useWeatherState';
+import { Loader } from '../../Loader';
 import './more-card.css';
 export function BaseTodayInfoCard({ headline, value, meaning, directionWind }) {
+	const { isLoading, isError } = useWeatherState((state) => state);
 	return (
 		<div className="more-card">
-			<HeadlineTodayInfoCard>{headline}</HeadlineTodayInfoCard>
-			<MoreCardInfo {...{ value, meaning }} />
-			{directionWind && <MoreCardFooter {...{ directionWind }} />}
+			{!isLoading && !isError && (
+				<>
+					<HeadlineTodayInfoCard>{headline}</HeadlineTodayInfoCard>
+					<MoreCardInfo {...{ value, meaning }} />
+					{directionWind && <MoreCardFooter {...{ directionWind }} />}
+				</>
+			)}
+			{isLoading && <Loader />}
 		</div>
 	);
 }

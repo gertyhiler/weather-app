@@ -25,7 +25,7 @@ export function Search() {
 					{!isLoading && isError && (<p>Упс! Город не найден, попробуйте другой</p>)}
           {!isLoading && [...response]
 							.reverse()
-							.map((i) => <SearchHistoryCard text={i.name} key={i.place_id} onClick={closeBtnHandler} />)}
+							.map((i) => <SearchHistoryCard content={i} key={i.place_id} onClick={closeBtnHandler} />)}
 				</div>
 			</div>
 			<SearchCityBtn onClick={searchCityBtnHandler} />
