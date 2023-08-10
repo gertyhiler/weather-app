@@ -7,19 +7,16 @@ import { setHistory } from '../../utils/setHistory';
 export const useSearchState = create((set) => ({
 	isLoading: false,
 	isError: false,
-	response:
-	  getHistory() === null
-			? []
-			: getHistory(),
+	response: getHistory() === null ? [] : getHistory(),
 
 	getCity: async () => {
 		const value = useInputSearchState.getState().value;
 		set({ isLoading: true });
 		const response = await getCitySearch(value);
-		if (response.length === 0) return set({ isLoading: false, isError: true, response: [] });
+		if (response.length === 0)
+			return set({ isLoading: false, isError: true, response: getHistory() === null ? [] : getHistory() });
 
-    setHistory(response)
+		setHistory(response);
 		set({ isLoading: false, isError: false, response: getHistory() });
-
 	},
 }));

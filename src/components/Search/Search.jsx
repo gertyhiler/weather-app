@@ -21,13 +21,11 @@ export function Search() {
 					<CitySearchForm {...{ submitBtnHandler: getCity, closeBtnHandler }} />
 				</div>
 				<div className="search-wrapper">
-					{isLoading && <p>Загрузка...</p>}
-					{!isLoading &&
-						!isError &&
-						[...response
-							.reverse()]
+					{isLoading && (<p>Загрузка...</p>)}
+					{!isLoading && isError && (<p>Упс! Город не найден, попробуйте другой</p>)}
+          {!isLoading && [...response]
+							.reverse()
 							.map((i) => <SearchHistoryCard text={i.name} key={i.place_id} onClick={closeBtnHandler} />)}
-					{!isLoading && isError && <p>Упс! Город не найден, попробуйте другой</p>}
 				</div>
 			</div>
 			<SearchCityBtn onClick={searchCityBtnHandler} />
