@@ -24,7 +24,7 @@ export function ContentMore() {
 				</li>
 				<li className="more__item">
 					{isLoading && <PressureCard value={0} />}
-					{!isLoading && !isError && response !== null && <PressureCard value={response.main.pressure} /> }
+					{!isLoading && !isError && response !== null && <PressureCard value={response.main.pressure * 0.75} /> }
 				</li>
 			</ul>
 		</div>
