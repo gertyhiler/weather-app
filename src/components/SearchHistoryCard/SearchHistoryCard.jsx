@@ -3,9 +3,10 @@ import { SearchHistoryText } from "../SearchHistoryText/";
 import './history-card.css'
 
 export function SearchHistoryCard({content, onClick}) {
-  const getWeather = useWeatherState(state => state.getWeather)
+  const {getWeather, setThisCity} = useWeatherState(state => state)
   const submitHandler = () => {
     onClick()
+    setThisCity(content.name)
     getWeather(content)
   }
 

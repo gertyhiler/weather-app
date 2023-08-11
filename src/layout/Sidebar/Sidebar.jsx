@@ -6,7 +6,7 @@ import { useWeatherState } from '../../state/useWeatherState';
 import { returnFormattedStringThisDay } from '../../utils/returnFormattedStringThisDay';
 
 export function Sidebar() {
-	const response = useWeatherState((state) => state.response);
+	const {response, thisCity} = useWeatherState((state) => state);
 	return (
 		<aside id="side-bar" className="side-bar">
 			<ThemeSwitcher />
@@ -29,7 +29,7 @@ export function Sidebar() {
 						weatherStatus: response.weather[0].description,
 						temperatureFeelsLike: response.main.feels_like,
 						thisDay: returnFormattedStringThisDay(),
-						thisCity: response.name,
+						thisCity: thisCity === null ? response.name : thisCity,
 					}}
 				/>
 			)}

@@ -4,9 +4,9 @@ export function setHistory(data) {
 	return window.localStorage.setItem(
 		'avk-w-app-search-history',
 		JSON.stringify(
-			[...(getHistory() === null ? [] : getHistory()), ...data].filter(
+			[...(getHistory() === null ? [] : getHistory()), ...data].reverse().filter(
 				(n, i, a) => n === a.find((m) => m.name === n.name)
-			).slice(-5)
+			).reverse().slice(-5)
 		)
 	);
 }

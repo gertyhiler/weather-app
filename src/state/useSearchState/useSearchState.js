@@ -3,6 +3,7 @@ import { useInputSearchState } from '../useInputSearchState';
 import { getCitySearch } from '../../$api/getCitySearch';
 import { getHistory } from '../../utils/getHistory';
 import { setHistory } from '../../utils/setHistory';
+import { useWeatherState } from '../useWeatherState';
 
 export const useSearchState = create((set) => ({
 	isLoading: false,
@@ -18,5 +19,7 @@ export const useSearchState = create((set) => ({
 
 		setHistory(response);
 		set({ isLoading: false, isError: false, response: getHistory() });
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		useWeatherState.getState().getWeather(response[0]);
 	},
 }));

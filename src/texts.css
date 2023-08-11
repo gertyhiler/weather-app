@@ -31,6 +31,7 @@
 .info__weather-text {
 	font-weight: 700;
 	font-size: 36px;
+  text-transform: capitalize;
 }
 
 .info__weather-text-small {
