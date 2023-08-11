@@ -1,21 +1,21 @@
-import { create } from "zustand";
-import { getCityWeather } from "../../$api/getCityWeather";
+import { create } from 'zustand';
+import { getCityWeather } from '../../$api/getCityWeather';
 
-export const useWeatherState = create((set) => ({
-  isLoading: false,
-  isError: false,
-  response: [],
+export const useWeatherState = create((set, get) => ({
+	isLoading: false,
+	isError: false,
+	response: null,
 
-  getWeather: async (city) => {
-    set({isLoading: true, isError: false, response: []})
+	getWeather: async (city) => {
+		set({ isLoading: true, isError: false });
 
-    try {
-      const response = await getCityWeather(city.lat, city.lon)
-      set({isLoading: false, isError: false, response})
-      console.log(response);
-    } catch (error) {
-      set({isLoading: false, isError: true, response: []})
-    }
-    set({isLoading: false, isError: false, response: []})
-  }
-}))
+		try {
+			const response = await getCityWeather(city.lat, city.lon);
+			set({ isLoading: false, isError: false, response });
+			console.log(response);
+		} catch (error) {
+			set({ isLoading: false, isError: true });
+		}
+		set({ isLoading: false, isError: false });
+	},
+}));

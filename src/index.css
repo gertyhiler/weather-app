@@ -5,6 +5,8 @@
 	--hint: #acacac;
   --light-gray: #E6E6E6;
 	--white: #fff;
+  --accent: #EC6E4D;
+  --progress: #D3D3D3;
   --dark: #212331;
 	--gray: #48484a;
 	--radius: 10px;
@@ -14,7 +16,9 @@
 .dark {
   --background-light: #100E1C;
 	--hint: #acacac;
+  --accent: #EC6E4D;
   --light-gray: #100E1C;
+  --progress: #E6E6E6;
 	--white: #212331;
   --dark: #212331;
 	--gray: #E6E6E6;

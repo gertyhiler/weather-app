@@ -15,7 +15,7 @@
 	font-size: 50px;
 }
 
-.info__temp:first-letter {
+.info__temp_first-letter {
 	font-size: 96px;
 	font-weight: 900;
 }

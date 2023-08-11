@@ -4,7 +4,8 @@ import { MoreCardFooter } from '../MoreCardFooter';
 import { useWeatherState } from '../../../state/useWeatherState';
 import { Loader } from '../../Loader';
 import './more-card.css';
-export function BaseTodayInfoCard({ headline, value, meaning, directionWind }) {
+import { ProgressBar } from '../ProgressBar';
+export function BaseTodayInfoCard({ headline, value, meaning, directionWind, humidity }) {
 	const { isLoading, isError } = useWeatherState((state) => state);
 	return (
 		<div className="more-card">
@@ -13,6 +14,7 @@ export function BaseTodayInfoCard({ headline, value, meaning, directionWind }) {
 					<HeadlineTodayInfoCard>{headline}</HeadlineTodayInfoCard>
 					<MoreCardInfo {...{ value, meaning }} />
 					{directionWind && <MoreCardFooter {...{ directionWind }} />}
+          {humidity && <ProgressBar progress={humidity}/>}
 				</>
 			)}
 			{isLoading && <Loader />}
