@@ -35,6 +35,9 @@ export const useSliderState = create((set, get) => ({
 					maxStep: Math.ceil(
 						((itemWidth + gap / 2) * sliderRef.firstChild.firstChild.childNodes.length) / sliderRef.offsetWidth
 					),
+          translate: 0,
+          isNext: true,
+			    isPrev: false,
 				});
 			},
 			false
