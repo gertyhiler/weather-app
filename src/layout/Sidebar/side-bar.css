@@ -14,6 +14,10 @@
 	.side-bar {
     overflow: scroll;
 	}
+
+  .side-bar:has(> .search_active) {
+    overflow: hidden;
+  }
 }
 
 @media (width <= 827px) {
@@ -30,19 +34,14 @@
 .search {
 	padding: 42px;
 	position: absolute;
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	background: var(--white);
 	z-index: 10;
 	left: -100%;
+  overflow: hidden;
 
 	transition: transform 0.5s ease-in-out;
-}
-
-@media (height >= 700px) {
-  .search {
-    height: 100%;
-  }
 }
 
 @media (width <= 970px) {
