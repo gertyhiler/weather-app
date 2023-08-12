@@ -16,6 +16,8 @@
 
 .slider-card img {
 	transform: translateY(-8px);
+  width: 100px;
+  height: auto;
 }
 
 .slider-card__text {

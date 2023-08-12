@@ -11,18 +11,20 @@ export const useSliderState = create((set, get) => ({
 	isPrev: false,
 	isNext: true,
 
-	initSlider: (sliderRef, gap, itemWidth) => {
+	initSlider: (sliderRef, gap, itemWidth, itemCount) => {
 		set({
 			sliderWidth: sliderRef.offsetWidth,
 			gap,
 			itemWidth,
 			step: 1,
-			itemCountInContainer: sliderRef.firstChild.firstChild.childNodes.length,
+			itemCountInContainer: itemCount,
 			maxStep: Math.ceil(
-				((itemWidth + gap / 2) * sliderRef.firstChild.firstChild.childNodes.length) / sliderRef.offsetWidth
+				((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
 			),
 			translate: 0,
-			isNext: true,
+			isNext:  Math.ceil(
+				((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
+			) === 1 ? false : true,
 			isPrev: false,
 		});
 
@@ -33,10 +35,12 @@ export const useSliderState = create((set, get) => ({
 				set({
 					sliderWidth: sliderRef.offsetWidth,
 					maxStep: Math.ceil(
-						((itemWidth + gap / 2) * sliderRef.firstChild.firstChild.childNodes.length) / sliderRef.offsetWidth
+						((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
 					),
           translate: 0,
-          isNext: true,
+          isNext: Math.ceil(
+            ((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
+          ) === 1 ? false : true,
 			    isPrev: false,
 				});
 			},
