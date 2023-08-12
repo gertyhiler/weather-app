@@ -31,8 +31,11 @@
 .info__weather-text {
 	font-weight: 700;
 	font-size: 36px;
-  text-transform: capitalize;
   text-align: center;
+}
+
+.info__weather-text::first-letter {
+  text-transform: uppercase;
 }
 
 .info__weather-text-small {
