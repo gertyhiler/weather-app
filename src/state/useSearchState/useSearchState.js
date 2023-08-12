@@ -20,7 +20,6 @@ export const useSearchState = create((set) => ({
 		setHistory(response);
     useInputSearchState.getState().setValue('')
 		set({ isLoading: false, isError: false, response: getHistory() });
-		// eslint-disable-next-line react-hooks/rules-of-hooks
 		useWeatherState.getState().getWeather(response[0]);
 	},
 }));
