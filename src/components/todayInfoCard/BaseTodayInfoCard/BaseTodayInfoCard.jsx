@@ -13,7 +13,7 @@ export function BaseTodayInfoCard({ headline, value, meaning, directionWind, hum
 				<>
 					<HeadlineTodayInfoCard>{headline}</HeadlineTodayInfoCard>
 					<MoreCardInfo {...{ value, meaning }} />
-					{directionWind && <MoreCardFooter {...{ directionWind }} />}
+					{(directionWind || directionWind === 0) && <MoreCardFooter {...{ directionWind }} />}
           {humidity && <ProgressBar progress={humidity}/>}
 				</>
 			)}

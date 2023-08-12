@@ -12,7 +12,7 @@ export function MoreCardFooter({ directionWind }) {
 
 	return (
 		<div className="more-card__footer">
-			<span className="weather-text more-card__footer-text" style={{"--deg": `${directionWind}deg`}}>{directions[index]}</span>
+			<span className="weather-text more-card__footer-text" style={{"--deg": `${directionWind + 45}deg`}}>{directions[index]}</span>
 		</div>
 	);
 }
