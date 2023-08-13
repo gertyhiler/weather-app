@@ -1,4 +1,4 @@
-import { Slider } from '../Slider/';
+import { MemoizedSlider, Slider } from '../Slider/';
 import { SwitcherTab } from '../SwitcherTab';
 import { ContentHeadline } from '../ContentHeadline';
 import { useSliderSwitcherController } from '../../hooks/useSliderSwitcherController';
@@ -10,7 +10,6 @@ export function ContentHeader() {
 	const { isWeek, isHours, setWeekTab, setHoursTab } = useSliderSwitcherController();
 	const listResponse = useWeatherState((state) => state.listResponse);
 	const [listOnWeek, setListOnWeek] = useState([]);
-
 	useEffect(() => {
 		if (listResponse === null || !isWeek) return;
 		const filter = (i) => {
@@ -39,7 +38,7 @@ export function ContentHeader() {
 
 			{listResponse === null && <Loader />}
 			{listResponse !== null && (
-				<Slider
+				<MemoizedSlider
           currentTab={isHours}
 					items={
 						isHours

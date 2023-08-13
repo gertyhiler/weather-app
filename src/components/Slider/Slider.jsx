@@ -1,13 +1,12 @@
 import { TabCard } from '../TabCard';
 import { SliderControls } from '../SliderControls';
-import './slider.css';
 import { useSliderState } from '../../state/useSliderState/useSliderState';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { returnFormattedStringResponseDay } from '../../utils/returnFormattedStringResponseDay';
+import './slider.css';
 export function Slider({ items, currentTab }) {
   const sliderRef = useRef(null);
 	const { initSlider, translate } = useSliderState((state) => state);
-
   useEffect(() => {
     if (sliderRef === null) return;
     initSlider(sliderRef.current, 24, 100, items.length);
@@ -38,3 +37,6 @@ export function Slider({ items, currentTab }) {
 		</div>
 	);
 }
+
+
+export const MemoizedSlider= React.memo(Slider)

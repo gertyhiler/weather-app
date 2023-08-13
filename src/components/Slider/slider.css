@@ -13,7 +13,7 @@
 	display: flex;
 	width: 720px;
 	gap: 24px;
-  transition: translate .2s ease-in;
+  transition: transform .2s ease-in;
 }
 
 @media (width <= 1300px) {
