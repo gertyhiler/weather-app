@@ -1,4 +1,4 @@
-import { MemoizedSlider, Slider } from '../Slider/';
+import { Slider } from '../Slider/';
 import { SwitcherTab } from '../SwitcherTab';
 import { ContentHeadline } from '../ContentHeadline';
 import { useSliderSwitcherController } from '../../hooks/useSliderSwitcherController';
@@ -38,7 +38,7 @@ export function ContentHeader() {
 
 			{listResponse === null && <Loader />}
 			{listResponse !== null && (
-				<MemoizedSlider
+				<Slider
           currentTab={isHours}
 					items={
 						isHours

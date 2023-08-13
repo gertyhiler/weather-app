@@ -37,6 +37,3 @@ export function Slider({ items, currentTab }) {
 		</div>
 	);
 }
-
-
-export const MemoizedSlider= React.memo(Slider)

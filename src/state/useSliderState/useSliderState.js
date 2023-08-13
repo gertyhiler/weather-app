@@ -18,15 +18,17 @@ export const useSliderState = create((set, get) => ({
 			itemWidth,
 			step: 1,
 			itemCountInContainer: itemCount,
-			maxStep: Math.ceil(
-				((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
-			),
+			maxStep: itemCount - Number((sliderRef.offsetWidth / (itemWidth + gap)).toFixed()) + 1,
 			translate: 0,
-			isNext:  Math.ceil(
-				((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
-			) === 1 ? false : true,
+			isNext: itemCount - Number((sliderRef.offsetWidth / (itemWidth + gap)).toFixed()) + 1 <= 1 ? false : true,
 			isPrev: false,
 		});
+
+    console.log();
+    // old calc max step
+    // Math.ceil(
+    //   ((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
+    // ),
 
 		window.addEventListener(
 			'resize',
@@ -34,13 +36,10 @@ export const useSliderState = create((set, get) => ({
 				if (sliderRef.offsetWidth === get().sliderWidth) return;
 				set({
 					sliderWidth: sliderRef.offsetWidth,
-					maxStep: Math.ceil(
-						((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
-					),
+					maxStep: itemCount - Number((sliderRef.offsetWidth / (itemWidth + gap)).toFixed()) + 1,
           translate: 0,
-          isNext: Math.ceil(
-            ((itemWidth + gap / 2) * itemCount) / sliderRef.offsetWidth
-          ) === 1 ? false : true,
+          step: 1,
+          isNext: itemCount - Number((sliderRef.offsetWidth / (itemWidth + gap)).toFixed()) + 1 <= 1 ? false : true,
 			    isPrev: false,
 				});
 			},
@@ -54,8 +53,7 @@ export const useSliderState = create((set, get) => ({
 		if (get().step === get().maxStep) set({ isNext: false, isPrev: true });
 		set({
 			translate:
-				get().translate +
-				Number(get().sliderWidth / (get().itemWidth + get().gap)).toFixed() * (get().itemWidth + get().gap),
+				get().translate + (get().itemWidth + get().gap),
 		});
 	},
 	prevBtn: () => {
@@ -66,7 +64,7 @@ export const useSliderState = create((set, get) => ({
 		set({
 			translate:
 				get().translate -
-				Number(get().sliderWidth / (get().itemWidth + get().gap)).toFixed() * (get().itemWidth + get().gap),
+				(get().itemWidth + get().gap),
 		});
 	},
 }));
