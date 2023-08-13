@@ -46,10 +46,9 @@ export function ContentHeader() {
 									const currentDay = new Date();
 									const iterableDay = new Date(i.dt * 1000);
 
-									if (isWeek && currentDay.getDate() !== iterableDay.getDate()) return true;
-									if (isHours && currentDay.getDate() === iterableDay.getDate()) return true;
+									if ((isHours && currentDay.getDate() === iterableDay.getDate()) || (currentDay.getDate() + 1 === iterableDay.getDate())) return true;
 									return false;
-							  })
+							  }).slice(0, 8)
 							: listOnWeek
 					}
 				/>
